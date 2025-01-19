@@ -117,14 +117,11 @@ export default function ChatInterface({
       };
 
       // Initialize SSE connection
-      const response = await fetch(
-        "https://nextjs-ai-agent.vercel.app/api/chat/stream",
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(requestBody),
-        }
-      );
+      const response = await fetch("/api/chat/stream", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(requestBody),
+      });
 
       if (!response.ok) throw new Error(await response.text());
       if (!response.body) throw new Error("No response body available");
