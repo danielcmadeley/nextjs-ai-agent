@@ -6,14 +6,13 @@ import { redirect } from "next/navigation";
 import { auth } from "@clerk/nextjs/server";
 
 interface ChatPageProps {
-  params: {
+  params: Promise<{
     chatId: string;
-  };
+  }>;
 }
 
 export default async function ChatPage({ params }: ChatPageProps) {
-  const { chatId } = params;
-
+  const { chatId } = await params; // Await the params object
   // Cast the chatId to Id<"chats"> type when using it with Convex
   const chatIdTyped = chatId as Id<"chats">;
 
