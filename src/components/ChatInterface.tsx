@@ -118,7 +118,7 @@ export default function ChatInterface({
 
       // Initialize SSE connection
       const response = await fetch(
-        "https://nextjs-ai-agent.vercel.app//api/chat/stream",
+        "https://nextjs-ai-agent.vercel.app/api/chat/stream",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
