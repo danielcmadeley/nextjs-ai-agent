@@ -40,7 +40,7 @@ export default function Loading() {
         {/* Input section */}
         <div className="border-t bg-white p-4">
           <div className="max-w-4xl mx-auto">
-            <div className="h-12 bg-gray-50 rounded-full animate-pulse" />
+            <div className="h-12 bg-gray-100 rounded-full animate-pulse" />
           </div>
         </div>
       </div>
